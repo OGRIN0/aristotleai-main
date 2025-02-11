@@ -1,0 +1,7 @@
+.characterList{
+    width: 100vh;
+    display: flex;
+    margin-left: 10rem;
+    justify-content: center;
+    align-items: center;
+}

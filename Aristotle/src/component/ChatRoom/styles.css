@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+.input-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.input_field {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white; /* Set text color to white */
+}
+
+.app_button_1 {
+  background-color: #007bff; /* Blue color for the button */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+.tw-text-quattrocento-sans {
+  font-family: 'Quattrocento Sans';
+  font-size: large;
+}

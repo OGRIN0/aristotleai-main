@@ -1,0 +1,98 @@
+#dark, #light, #violet,#cyan ,#blue,#lime {
+    transition: background-color 2s ease, color 3s ease;
+}
+
+
+/*****************/
+
+#dark 
+{
+    
+    background-color: #324258;
+    color:white
+}
+
+#light{
+
+    background-color: aliceblue;
+    color:#324258
+}
+#violet{
+
+    background-color: rgb(176, 98, 250);
+    color:white;
+}
+#cyan{
+
+    background-color: #00838F;
+    color:white;
+}
+#blue{
+
+    background-color: #1565C0;
+    color:white;
+}
+#lime{
+
+    background-color: #9E9D24;
+    color:white;
+}
+
+
+/*****************/
+
+ #dark   .ex
+{
+    color:white
+}
+
+#light .ex{
+
+    color:#324258
+}
+#violet .ex{
+
+    color:white
+}
+#cyan .ex{
+
+    color:white
+}
+#blue .ex{
+
+    color:white
+}
+#lime .ex{
+
+    color:white
+}
+
+
+/*****************/
+
+/* Activity */
+#dark   h4
+{
+    color:white
+}
+
+#light h4{
+
+    color:#324258
+}
+#violet h4{
+
+    color:white
+}
+#cyan h4{
+
+    color:white
+}
+#blue h4{
+
+    color:white
+}
+#lime h4{
+
+    color:white
+}

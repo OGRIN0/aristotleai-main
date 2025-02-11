@@ -1,0 +1,213 @@
+
+.container-sam {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 20px; /* Add gap between cards */
+  }
+  
+  .button-container-sam {
+    display: flex;
+    margin-bottom: 20px;
+    grid-column: 1 / span 2; /* Span both columns */
+    justify-content: flex-start; /* Align buttons to the left */
+  }
+  
+  .button-sam {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Add some gap between buttons */
+    background-color: #5e09e8; /* Button background color */
+    color: white; /* Text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .button-sam:hover {
+    background-color: #4b0082; /* Darken the background color on hover */
+  }
+  
+  
+  .button-sam.active {
+    background-color: #ccc; /* Change to desired active button color */
+  }
+  
+  .content-sam {
+    margin-top: 20px;
+  }
+  
+  .container-sam .card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px; /* Add border radius to cards */
+    height: 400px; /* Adjusted length of cards */
+    width: 200px; /* Adjusted width of cards */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .container-sam .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: translateY(-5px); /* Move the card slightly up on hover */
+  }
+  
+  
+  
+  .pricing-sam h1 {
+    margin-bottom: 10px; /* Add space below pricing heading */
+  }
+  
+  .pricing-sam p {
+    margin-top: -20px;
+    margin-left: 80px;
+    font-size: large;
+  }
+  
+  .downtext-sam  {
+    font-size: larger;
+  }
+  
+  /* Background images for cards */
+  .card1-sam {
+    padding: 20px;
+    width: 550px;
+    height: 320px;
+    border-radius: 5%;
+    border: 2px solid rgb(14, 14, 14);
+    text-align-last: left;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPLqOB1Gc8rI1Y_34K1tFxoim-X3W4Rz_LUw&usqp=CAU');
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  .card1-sam:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Increase the size of the card on hover */
+    transition: all 0.3s ease; /* Add a smooth transition */
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background color */
+  }
+  
+  
+  .card1down-sam {
+    font-weight: 500;
+  margin-left: 58%;
+  margin-top: 40px;
+  
+  }
+  
+  .card2-sam {
+    padding: 20px;
+    width: 550px;
+    height: 320px;
+    border: 2px solid rgb(14, 14, 14);
+    border-radius: 5%;
+    text-align-last: left;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDXylOhVvumU4xVLaHZtopM2XFgy761HmBHx1s9SWRVrZjgcu0ksxmtEwTcOro43cJtcg&usqp=CAU');
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  .card2-sam:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Increase the size of the card on hover */
+    transition: all 0.3s ease; /* Add a smooth transition */
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background color */
+  }
+  
+  .card2down-sam {
+    font-weight: 500;
+   margin-top: -30px;
+    margin-left: 52%;
+  }
+  
+  .card3-sam {
+    padding: 20px;
+    width: 550px;
+    height: 320px;
+    border: 2px solid rgb(14, 14, 14);
+    border-radius: 5%;
+    text-align-last: left;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBnejw65l6Od3m48T9N_J0U7MFb5pYQjC61g&usqp=CAU');
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  .card3-sam:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Increase the size of the card on hover */
+    transition: all 0.3s ease; /* Add a smooth transition */
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background color */
+  }
+  
+  .card3down-sam {
+    font-weight: 500;
+    margin-top: -70px;
+    margin-left: 58%;
+  }
+  
+  .card4-sam {
+  
+    padding: 25px;
+    width: 550px;
+    height: 320px;
+    border: 2px solid rgb(14, 14, 14);
+    border-radius: 5%;
+    text-align-last: left;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4oLgLecWKE9AWJW5uHry7f7FLXbtqEn-OyQ&usqp=CAU');
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  .card4-sam:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Increase the size of the card on hover */
+    transition: all 0.3s ease; /* Add a smooth transition */
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent background color */
+  }
+  
+  .card4down-sam {
+    font-weight: 500;
+    margin-top: -100px;
+    margin-left: 58%;
+  }
+  .button-container1-sam {
+    display: flex;
+  }
+  
+  .button-container1-sam .button1 {
+    padding: 20px 30px;
+    font-size: 16px;
+    border: 2px solid #5e09e8;
+    cursor: pointer;
+    background-color: #8f52f1;
+    margin-left: 80px;
+    border-radius: 2px;
+  }
+  
+  .button-container1-sam .button1.active {
+    background-color: #5e09e8;
+  }
+  
+  .lastlist-sam
+  {
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+  .l1-sam{
+    border: 2px solid black;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .row-sam{
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+  }
+
+
+  

@@ -1,0 +1,66 @@
+/* src/components/QueryInput.css */
+
+.query-input-container {
+  position: absolute;
+  bottom: 50px; /* Adjust the bottom value to move the query box higher */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.query-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.query-input input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.send-button {
+  background-color: #153e6b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.load-csv-button {
+  /* position: absolute; */
+  /* right: 10px; */
+  /* right: calc(70% - 450px);  */
+  bottom: 15px; /* Adjust bottom position to place it outside */
+  background-color: #153e6b;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%; /* Make it round */
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-csv-button:hover {
+  background-color: #153e6b;
+}
+
+

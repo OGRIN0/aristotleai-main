@@ -1,0 +1,16 @@
+/* fonts.css */
+@font-face {
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quattrocento Sans Regular'), local('QuattrocentoSans-Regular'), url('./fonts/QuattrocentoSans-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Quattrocento Sans Bold'), local('QuattrocentoSans-Bold'), url('./fonts/QuattrocentoSans-Bold.ttf') format('truetype');
+  }
+  
+

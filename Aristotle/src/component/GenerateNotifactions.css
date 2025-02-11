@@ -1,0 +1,161 @@
+
+/* body {
+  overflow:hidden;
+}
+body {
+  overflow: auto;
+} */
+/* 
+.notification-ui_dd:hover
+{
+  overflow: auto;
+} */
+.notification-ui_dd {
+    padding: 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    border: 0;
+    max-width: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative; 
+    top: 150px;
+    background-color: rgb(230, 240, 238);
+  }
+
+  
+   .expanded {
+    padding: 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    border: 0;
+    max-width: max-content;
+    max-height:max-content;
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative; 
+  }
+  
+  .notification-ui_dd-header {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+  }
+  
+  .notification-ui_dd-header h3 {
+    margin-bottom: 0;
+  }
+  
+  .notification-ui_dd-content {
+    padding: 15px;
+    
+  }
+  
+  .notification-list {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .notification-list:hover {
+    /* background-color: #f2ecec; */
+    padding: 10px;
+  }
+  
+  .notification-list--unread {
+    background-color: #f0f8ff;
+  }
+  
+  .notification-list--unread:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    height: calc(100% + 1px);
+    border-left: 2px solid #29B6F6;
+  }
+  
+  .notification-list_img img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50px;
+    margin-right: 20px;
+  }
+  
+  .notification-list_detail p {
+    color: #282c34;
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+  
+  .notification-list_feature-img img {
+    height: 48px;
+    width: 48px;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+  
+  .notification-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-ui_dd-footer {
+    position: sticky; 
+    bottom: 0; 
+    /* background-color: white;  */
+    padding: 15px; 
+    z-index: 1; 
+  }
+  
+  
+  
+  
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

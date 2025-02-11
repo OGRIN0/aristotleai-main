@@ -1,0 +1,83 @@
+/* src/components/UserDropdown.css */
+
+.user-dropdown {
+  margin-top: 85px;
+  position: fixed;
+  z-index: 9999;
+}
+
+.user-dropdown-button {
+  background-color: #153e6b;
+  color: white;
+  border: none;
+  padding: 14px 24px; /* Increased padding for larger size */
+  border-radius: 20px; /* Increased border radius for more curved edges */
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown-button.selected {
+  background-color: #153e6b; /* Retain original background color */
+  color: white;
+  border: none;
+  padding: 14px 24px; /* Increased padding for larger size */
+  border-radius: 20px; /* Increased border radius for more curved edges */
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  margin-right: 8px; /* Adjust icon spacing */
+}
+
+.user-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  top: 50px; /* Adjust dropdown position */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Increased border radius for more curved edges */
+  overflow: hidden;
+}
+
+.user-dropdown-content input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Increased border radius for more curved edges */
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.user-dropdown-content .user-item {
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.user-dropdown-content .user-item:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-user {
+  padding: 12px;
+  background-color: #f0f0f0; /* Shade the selected user button */
+  border-radius: 20px; /* Increased border radius for more curved edges */
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.selected-user:hover {
+  background-color: #f0f0f0; /* Adjust hover color if needed */
+}
