@@ -1,22 +1,31 @@
 import { Result } from "./resultType";
+import axios from 'axios';
 
-export async function finGPTQuery(query) {
+const config = {
+  api: process.env.REACT_APP_API_URL || "https://aristotleai-backend-deployment.onrender.com", 
+};
+
+export const finGPTQuery = async (data) => {
   try {
-    const response = await fetch("http://127.0.0.1:5002/api/answer", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ question: query }),
-    });
-
-    if (!response.ok) {
-      return Result.Err(`Error => ${error.message}`);
+    if (!data || typeof data !== "string") {
+      return Result.Err("Invalid input: prompt must be a non-empty string.");
     }
 
-    const result = await response.json();
-    return Result.Ok(result);
+    let response = await axios.post(`${config.api}/query`, 
+      { prompt: data }, 
+      {
+        headers: {
+          "Content-Type": "application/json",  
+        },
+      }
+    );
+    
+    return Result.Ok(response.data.answer); 
   } catch (error) {
-    return Result.Err(`Error => ${error.message}`);
+    if (axios.isAxiosError(error)) {
+      const errorMessage = error.response?.data?.error || error.message;
+      return Result.Err(`Mosaic API Error: ${errorMessage}`);
+    }
+    return Result.Err(`Unexpected Error: ${error.message}`);
   }
-}
+};

@@ -2,7 +2,7 @@ import { Result } from "./resultType";
 import axios from 'axios';
 
 const config = {
-  api: process.env.REACT_APP_API_URL || "http://127.0.0.1:5088", 
+  api: process.env.REACT_APP_API_URL || "https://aristotleai-backend-deployment.onrender.com", 
 };
 
 export const queryMosaicAI = async (data) => {

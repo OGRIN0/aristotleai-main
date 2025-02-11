@@ -1,25 +1,31 @@
 import { Result } from "./resultType";
-import axios from "axios";
+import axios from 'axios';
 
 const config = {
-  api: "https://apis.chimera-dev.cloud:5003",
+  api: process.env.REACT_APP_API_URL || "https://aristotleai-backend-deployment.onrender.com", 
 };
 
 export const queryVertexAI = async (data) => {
   try {
-    let response = await axios.get(config.api + "/gai/chat", {
-      params: { q: data },
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    if (!data || typeof data !== "string") {
+      return Result.Err("Invalid input: prompt must be a non-empty string.");
+    }
 
-    if (response.status !== 200)
-      return Result.Err(`Error querying API: ${response.statusText}`);
-    const result = response.data;
-    return Result.Ok(result);
+    let response = await axios.post(`${config.api}/query`, 
+      { prompt: data }, 
+      {
+        headers: {
+          "Content-Type": "application/json",  
+        },
+      }
+    );
+    
+    return Result.Ok(response.data.answer); 
   } catch (error) {
-    console.error("Catch block error:", error.message);
-    return Result.Err(`Error => ${error.message}`);
+    if (axios.isAxiosError(error)) {
+      const errorMessage = error.response?.data?.error || error.message;
+      return Result.Err(`Mosaic API Error: ${errorMessage}`);
+    }
+    return Result.Err(`Unexpected Error: ${error.message}`);
   }
 };

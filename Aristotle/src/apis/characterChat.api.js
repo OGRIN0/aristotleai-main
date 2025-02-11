@@ -2,22 +2,30 @@ import { Result } from "./resultType";
 import axios from 'axios';
 
 const config = {
-  api: "https://apis.chimera-dev.cloud:5004",
+  api: process.env.REACT_APP_API_URL || "https://aristotleai-backend-deployment.onrender.com", 
 };
 
 export const queryCharacterAIBot = async (data) => {
   try {
-    let response = await axios.get(`${config.api}/bedrock/${data}`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    if (!data || typeof data !== "string") {
+      return Result.Err("Invalid input: prompt must be a non-empty string.");
+    }
+
+    let response = await axios.post(`${config.api}/query`, 
+      { prompt: data }, 
+      {
+        headers: {
+          "Content-Type": "application/json",  
+        },
+      }
+    );
     
-    return Result.Ok(response.data.completion);
+    return Result.Ok(response.data.answer); 
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      return Result.Err(`Error => ${error.response?.data || error.message}`);
+      const errorMessage = error.response?.data?.error || error.message;
+      return Result.Err(`Mosaic API Error: ${errorMessage}`);
     }
-    return Result.Err(`Error => ${error.message}`);
+    return Result.Err(`Unexpected Error: ${error.message}`);
   }
 };
